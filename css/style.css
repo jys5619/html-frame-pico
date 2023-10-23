@@ -1,0 +1,9 @@
+.success {
+    background-color: firebrick;
+}
+
+.btn-small {
+  font-size: 13px;
+  height: 30px;
+  padding: 4px 10px;
+}
