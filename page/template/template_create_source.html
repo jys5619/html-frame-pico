@@ -1,0 +1,164 @@
+<html data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/pico.min.css" type="text/css">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+    <script type="text/javascript" src="/js/frame.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div include-html="/page/frame/header.html"></div>
+        <hr />
+        <!-- Page -->
+        <h1>Template</h1>
+        <section>
+            <div class="grid">
+                <button class="secondary outline"><a href="/page/template/template_new.html">New</a></button>
+                <button class=" secondary outline"><a href="/page/template/template_append.html">Append</a></button>
+                <button class="secondary outline"><a href="/page/template/template_edit.html">Edit</a></button>
+                <button class="secondary"><a href="/page/template/template_create_source.html">Create
+                        Source</a></button>
+            </div>
+
+            <div>
+                <b>New</b> : [Files] + [Source] + [Parameter] ==> [Template]
+            </div>
+            <div>
+                <b>Append</b> : [Template] ==> [Files] + [Source] + [Parameter] ==> [Template]
+            </div>
+            <div>
+                <b>Edit</b> : [Template] ==> [Template]
+            </div>
+            <div>
+                <b>Test Template</b> : [Template] ==> [Source]
+            </div>
+        </section>
+
+        <section>
+            <header>
+                <h2>Template Information Regist</h2>
+            </header>
+
+            <div>
+                <label for="type">Type
+                    <details name="type" role="list">
+                        <summary aria-haspopup="listbox">Form</summary>
+                        <ul role="listbox">
+                            <li><a>Form</a></li>
+                            <li><a>Batch</a></li>
+                            <li><a>Interface</a></li>
+                        </ul>
+                    </details>
+                </label>
+
+                <label for="firstname">
+                    Title
+                    <div class="grid">
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                </label>
+
+                <label for="target">
+                    Description
+                    <textarea rows="6"></textarea>
+                </label>
+            </div>
+
+            <footer>
+                <div class="grid">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <button class="secondary">
+                        Start >></button>
+                </div>
+            </footer>
+        </section>
+
+        <section>
+            <header>
+                <h2>Template List</h2>
+            </header>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">File</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><a href="#">/src/sample-test/<code>&lt;cool:title></code>File-01.js</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td><a href="#">/src/sample-test/SampleTestFile-02.js</a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td><a href="#">/src/sample-test/SampleTestFile.css</a></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <footer>
+                <div class="grid">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <button class="secondary">
+                        Complete >></button>
+            </footer>
+        </section>
+
+
+        <section>
+            <header>
+                <h2>Template</h2>
+            </header>
+            <div>
+                <label for="file">
+                    <input type="text" name="file" value="/src/sample-test/SampleTestFile.js">
+                </label>
+                <textarea rows="10">// Title : <cool:title>
+function sampleAlert(msg) {
+    alert("Test Alert Message");
+}</textarea>
+            </div>
+            <footer>
+                <div class="grid">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <button class="secondary">
+                        << Close</button>
+                </div>
+            </footer>
+        </section>
+
+        <section>
+            <code>&lt;cool:title /></code> : 입력한 텍스트 대로 변경한다.<br />
+            <code>&lt;cool:functionName:lower /></code> : 입력한 텍스트 LowerCase 변경한다.<br />
+            <code>&lt;cool:functionName:upper /></code> : 입력한 텍스트 UpperCase 변경한다.<br />
+            <code>&lt;cool-if:paging> ~~~~ &lt;cool-if:paging></code> : pageing 변수는 boolean page를 표시할지 여부<br />
+            <code>&lt;cool-fn:fnName /></code> : 관리자/사용자가 정의한 Function명을 등록한다.<br />
+        </section>
+        <section>
+            <button>Complete</button>
+        </section>
+        <!-- // Page -->
+    </div>
+</body>
+<script>
+    includeHTML();
+</script>
+
+</html>
